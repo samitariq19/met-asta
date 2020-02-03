@@ -163,7 +163,7 @@
 											<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 													Account 1
 											</button>
-											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="">
+											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 													<a class="dropdown-item disabled" href="#">Other Accounts</a>
 													<div class="dropdown-divider"></div>
 													<a class="dropdown-item" href="#">Account 2</a>
@@ -342,7 +342,7 @@
                                         <div class="col-sm-3">
                                             <label for="exampleInputEmail1">Create filter on</label>
                                             <div class="input-group">
-                                                <select id="column-select" class="form-control">
+                                                <select id="column-select" class="filter-apply form-control">
                                                     <option value="campaign_name" selected>Campaign Name</option>
                                                     <option value="adgroup_name">Adgroup Name</option>
                                                     <option value="targeting">Targeting</option>
@@ -377,11 +377,11 @@
                                         <div class="col-sm-3">
                                             <label for="exampleInputEmail1">Threshold / Value</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Value">
+                                                <input type="text" class="form-control" id="threshold" placeholder="Value">
                                             </div>
                                         </div>
                                         <div class="col-sm-1 mt-4">
-                                            <button type="button" class="btn btn-primary">Apply</button>
+                                            <button id="filter-btn" type="button" class="btn btn-primary">Apply</button>
                                         </div>
                                     </div>
                                 </div>
@@ -394,8 +394,8 @@
 										<div class="col-md-2">
 											<p>Applied Filters</p>
 										</div>
-										<div class="col-md-6">
-											<span>Applied filters will go here</span>
+										<div id="applied-filters" class="col-md-6">
+											<!-- <span>Applied filters will go here</span> -->
 										</div>
 										<div class="col-md-4">
 											<button type="button" class="btn btn-primary">Export XLS</button>
@@ -464,7 +464,7 @@
 											<td>Tieba</td>
 											<td>Nixie Sailor</td>
 											<td>2/12/2018</td>
-											<td><span class="kt-badge  kt-badge--primary kt-badge--inline kt-badge--pill">Canceled</span></td>
+											<td><span class="kt-badge kt-badge--primary kt-badge--inline kt-badge--pill">Canceled</span></td>
 											<td><span class="kt-badge kt-badge--primary kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-primary">Retail</span></td>
 											<!-- <td>
 												<a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View"><i class="la la-edit"></i></a>
@@ -769,6 +769,8 @@
 
 		<!--end::Page Scripts -->
 		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+
+		<script src="filter_apply.js"></script>
 
 		<script type="text/javascript">
 			$(document).ready( function () {
