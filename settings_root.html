@@ -26,7 +26,8 @@
 
 		<!--end::Global Theme Styles -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha256-siyOpF/pBWUPgIcQi17TLBkjvNgNQArcmwJB8YvkAgg=" crossorigin="anonymous" />
-		<link rel="stylesheet" href="assets/plugins/custom/datatables/datatables.bundle.css" type="text/css">
+		<!-- <link rel="stylesheet" href="assets/plugins/custom/datatables/datatables.bundle.css" type="text/css"> -->
+		<link rel="stylesheet" href="assets/css/pages/pricing/pricing-2.css">
 		<!--begin::Layout Skins(used by all pages) -->
 
 		<!--end::Layout Skins -->
@@ -63,7 +64,7 @@
 						<div class="dropdown-menu dropdown-menu-fit dropdown-menu-s">
 							<ul class="kt-nav kt-nav--bold kt-nav--md-space kt-margin-t-20 kt-margin-b-20">
 								<li class="kt-nav__item">
-									<a class="kt-nav__link active" href="#">
+									<a class="kt-nav__link active" href="report.html">
 										<span class="kt-nav__link-icon"><i class="flaticon2-user"></i></span>
 										<span class="kt-nav__link-text">Report</span>
 									</a>
@@ -103,7 +104,9 @@
 									</div>
 									
 									<div class="kt-header__brand-nav">
-										<div class="kt-margin-l-20">
+										<a href="report.html" class="btn btn-default ml-3" role="button">Report</a>
+										<a href="#" class="btn btn-default ml-3" role="button">Rules</a>
+										<!-- <div class="kt-margin-l-20">
 											<button type="button" class="btn btn-pill btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 												Report
 											</button>
@@ -112,7 +115,7 @@
 											<button type="button" class="btn btn-pill btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 												Rules
 											</button>
-										</div>
+										</div> -->
 									</div>
 								</div>
 
@@ -267,8 +270,8 @@
 													</div>
 												</a> -->
 												<div class="kt-notification__custom kt-space-between">
-													<a href="custom/user/login-v2.html" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Settings</a>
-													<a href="custom/user/login-v2.html" target="_blank" class="btn btn-clean btn-sm btn-bold">Sign out</a>
+													<a href="settings_root.html" class="btn btn-label btn-label-brand btn-sm btn-bold">Settings</a>
+													<a href="#" target="_blank" class="btn btn-clean btn-sm btn-bold">Sign out</a>
 												</div>
 											</div>
 
@@ -338,20 +341,20 @@
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#kt_tabs_1_3">
+									<a class="nav-link" data-toggle="tab" href="#kt_tabs_1_4">
 										<i class="la la-puzzle-piece kt-font-danger"></i> Ruleset Selection
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#kt_tabs_1_3">
+									<a class="nav-link" data-toggle="tab" href="#kt_tabs_1_5">
 										<i class="la la-puzzle-piece kt-font-danger"></i> Account Billing
 									</a>
 								</li><li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#kt_tabs_1_3">
+									<a class="nav-link" data-toggle="tab" href="#kt_tabs_1_6">
 										<i class="la la-puzzle-piece kt-font-danger"></i> Pricing Plans
 									</a>
 								</li><li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#kt_tabs_1_3">
+									<a class="nav-link" data-toggle="tab" href="#kt_tabs_1_7">
 										<i class="la la-puzzle-piece kt-font-danger"></i> Cancel Account
 									</a>
 								</li>
@@ -618,7 +621,278 @@
 									
 								</div>
 								<div class="tab-pane" id="kt_tabs_1_4" role="tabpanel">
-									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+									<div class="my-5 mx-5">
+										<h3>Ruleset Selection</h3>
+										<p>Choose which rulesets to use for each of your Amazon ad accounts.</p>
+									</div>
+									<div class="my-5 mx-5">
+										<h6>Default Ruleset</h6>
+										<p>Use this ruleset if no ruleset is defined for a particular Amazon Account.</p>
+										<div class="input-group">
+											<select id="ruleset-select" class="form-control">
+												<option>Default Ruleset</option>
+												<option>Ruleset #2</option>
+												<option>Ruleset #3</option>
+											</select>
+										</div>
+									</div>
+									<div class="row my-5">
+										<div class="col-sm-4 text-center">
+											<h6>Ad Account Name</h6>
+										</div>
+										<div class="col-sm-4 text-center">
+											<h6>Amazon Account ID</h6>
+										</div>
+										<div class="col-sm-4 text-center">
+											<h6>Ruleset</h6>
+										</div>
+									</div>
+									<div class="row my-3">
+										<div class="col-sm-4 text-center">
+											<p>Apple</p>
+										</div>
+										<div class="col-sm-4 text-center">
+											<p>ANHD234DFD2GD6DE9</p>
+										</div>
+										<div class="col-sm-4">
+											<div class="row">
+												<div class="col-sm-6 input-group mx-auto">
+													<select class="form-control">
+														<option>Technology Ruleset</option>
+														<option>Health Product Ruleset</option>
+														<option>Beauty Product Ruleset</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row my-3">
+										<div class="col-sm-4 text-center">
+											<p>Keto health</p>
+										</div>
+										<div class="col-sm-4 text-center">
+											<p>ANHD2348HF2GDDFJD</p>
+										</div>
+										<div class="col-sm-4">
+											<div class="row">
+												<div class="col-sm-6 input-group mx-auto">
+													<select class="form-control">
+														<option>Technology Ruleset</option>
+														<option>Health Product Ruleset</option>
+														<option>Beauty Product Ruleset</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane" id="kt_tabs_1_5" role="tabpanel">
+									<div class="row my-5 mx-5">
+										<div class="col-sm-8">
+											<h2>Account Billing</h2>
+											<p>Your bills are paid using a credit/debit card.</p>
+										</div>
+										<div class="col-sm-4 text-right">
+											<button class="btn btn-primary mr-5">+ Add Card</button>
+										</div>
+									</div>
+									<!-- <div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div> -->
+									<div class="row">
+										<div class="col-sm-6 offset-sm-3">
+											<div class="kt-portlet kt-portlet--bordered">
+												<div class="kt-portlet__head">
+													<div class="kt-portlet__head-label">
+														<h3 class="kt-portlet__head-title">
+															Payment Details
+														</h3>
+													</div>
+												</div>
+												<div class="kt-portlet__body">
+													<div class="row">
+														<div class="col-sm-2">
+															<img class="w-100" src="assets/media/company-logos/visa-logo.png" alt="Visa Logo">
+														</div>
+														<div class="pt-4 col-sm-8">
+															<h6>Visa*9624 * <span>Primary</span></h6>
+															<p>Expires on 03/20</p>
+														</div>
+														<div class="pt-4 col-sm-2">
+															<button class="btn btn-danger">Remove</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>									
+								</div>
+								<div class="tab-pane" id="kt_tabs_1_6" role="tabpanel">
+									<div class="kt-portlet">
+										<div class="kt-portlet__body kt-portlet__body--fit">
+											<div class="kt-pricing-2">
+												<div class="kt-pricing-2__head">
+													<div class="kt-pricing-2__title kt-font-light">
+														<h1>Transparent &amp; Simple Pricing</h1>
+													</div>
+													<div class="btn-group nav btn-group btn-group-pill btn-group-air" role="group">
+														<button type="button" class="btn   active btn-wide btn-uppercase btn-bolder" data-toggle="tab" href="#kt-pricing-2_content1" role="tab" aria-expanded="true">
+															Annual Plans
+														</button>
+														<button type="button" class="btn   btn-wide btn-uppercase btn-bolder" data-toggle="tab" href="#kt-pricing-2_content2" role="tab" aria-expanded="false">
+															Monthly Plans
+														</button>
+													</div>
+												</div>
+												<div class="tab-content">
+													<div class="tab-pane active" id="kt-pricing-2_content1" aria-expanded="true">
+														<div class="kt-pricing-2__content">
+															<div class="kt-pricing-2__container">
+																<div class="kt-pricing-2__items row">
+																	<div class="kt-pricing-2__item col-lg-4">
+																		<div class="kt-pricing-2__visual">
+																			<div class="kt-pricing-2__hexagon"></div>
+																			<span class="kt-pricing-2__icon kt-font-info"><i class="fa flaticon-confetti"></i></span>
+																		</div>
+																		<h2 class="kt-pricing-2__subtitle">Basic Plan</h2>
+																		<div class="kt-pricing-2__features">
+																			<span>1 Domain</span>
+																			<span>10 Users</span>
+																			<span>20 Copies</span>
+																			<span>Free Assets</span>
+																		</div>
+																		<span class="kt-pricing-2__price">69</span>
+																		<span class="kt-pricing-2__label">$</span>
+																		<div class="kt-pricing-2__btn">
+																			<button type="button" class="btn btn-brand btn-wide btn-upper btn-bold">Purchase</button>
+																		</div>
+																	</div>
+																	<div class="kt-pricing-2__item col-lg-4">
+																		<div class="kt-pricing-2__visual">
+																			<div class="kt-pricing-2__hexagon"></div>
+																			<span class="kt-pricing-2__icon kt-font-info"><i class="fa  flaticon-rocket"></i></span>
+																		</div>
+																		<h2 class="kt-pricing-2__subtitle">For Business</h2>
+																		<div class="kt-pricing-2__features">
+																			<span>10 Domains</span>
+																			<span>Unlimited Users</span>
+																			<span>Unlimited Copies</span>
+																			<span>Free Assets</span>
+																		</div>
+																		<span class="kt-pricing-2__price">169</span>
+																		<span class="kt-pricing-2__label">$</span>
+																		<div class="kt-pricing-2__btn">
+																			<button type="button" class="btn btn-brand btn-wide btn-upper btn-bold">Purchase</button>
+																		</div>
+																	</div>
+																	<div class="kt-pricing-2__item col-lg-4">
+																		<div class="kt-pricing-2__visual">
+																			<div class="kt-pricing-2__hexagon"></div>
+																			<span class="kt-pricing-2__icon kt-font-info"><i class="fa flaticon-gift"></i></span>
+																		</div>
+																		<h2 class="kt-pricing-2__subtitle">Enterprice</h2>
+																		<div class="kt-pricing-2__features">
+																			<span>Unlimited Domain</span>
+																			<span>Unlimited Users</span>
+																			<span>Unlimited Copies</span>
+																			<span>Free Assets</span>
+																		</div>
+																		<span class="kt-pricing-2__price">669</span>
+																		<span class="kt-pricing-2__label">$</span>
+																		<div class="kt-pricing-2__btn">
+																			<button type="button" class="btn btn-brand btn-wide btn-upper btn-bold">Purchase</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane" id="kt-pricing-2_content2" aria-expanded="false">
+														<div class="kt-pricing-2__content">
+															<div class="kt-pricing-2__container">
+																<div class="kt-pricing-2__items row">
+																	<div class="kt-pricing-2__item col-lg-4">
+																		<div class="kt-pricing-2__visual">
+																			<div class="kt-pricing-2__hexagon"></div>
+																			<span class="kt-pricing-2__icon kt-font-info"><i class="fa flaticon-confetti"></i></span>
+																		</div>
+																		<h2 class="kt-pricing-2__subtitle">Basic Plan</h2>
+																		<div class="kt-pricing-2__features">
+																			<span>1 Domain</span>
+																			<span>10 Users</span>
+																			<span>20 Copies</span>
+																			<span>Free Assets</span>
+																		</div>
+																		<span class="kt-pricing-2__price">19</span>
+																		<span class="kt-pricing-2__label">$</span>
+																		<div class="kt-pricing-2__btn">
+																			<button type="button" class="btn   btn-info btn-wide btn-uppercase btn-bolder btn-lg">Purchase</button>
+																		</div>
+																	</div>
+																	<div class="kt-pricing-2__item col-lg-4">
+																		<div class="kt-pricing-2__visual">
+																			<div class="kt-pricing-2__hexagon"></div>
+																			<span class="kt-pricing-2__icon kt-font-info"><i class="fa  flaticon-rocket"></i></span>
+																		</div>
+																		<h2 class="kt-pricing-2__subtitle">For Business</h2>
+																		<div class="kt-pricing-2__features">
+																			<span>10 Domains</span>
+																			<span>Unlimited Users</span>
+																			<span>Unlimited Copies</span>
+																			<span>Free Assets</span>
+																		</div>
+																		<span class="kt-pricing-2__price">49</span>
+																		<span class="kt-pricing-2__label">$</span>
+																		<div class="kt-pricing-2__btn">
+																			<button type="button" class="btn   btn-info btn-wide btn-uppercase btn-bolder btn-lg">Purchase</button>
+																		</div>
+																	</div>
+																	<div class="kt-pricing-2__item col-lg-4">
+																		<div class="kt-pricing-2__visual">
+																			<div class="kt-pricing-2__hexagon"></div>
+																			<span class="kt-pricing-2__icon kt-font-info"><i class="fa flaticon-gift"></i></span>
+																		</div>
+																		<h2 class="kt-pricing-2__subtitle">Enterprice</h2>
+																		<div class="kt-pricing-2__features">
+																			<span>Unlimited Domain</span>
+																			<span>Unlimited Users</span>
+																			<span>Unlimited Copies</span>
+																			<span>Free Assets</span>
+																		</div>
+																		<span class="kt-pricing-2__price">29</span>
+																		<span class="kt-pricing-2__label">$</span>
+																		<div class="kt-pricing-2__btn">
+																			<button type="button" class="btn   btn-info btn-wide btn-uppercase btn-bolder btn-lg">Purchase</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane mx-5" id="kt_tabs_1_7" role="tabpanel">
+									<div class="mt-5">
+										<h3>Cancel Account</h3>
+										<p>When canceling your account, your team / workspace will remain available until your subscription end date, after which it will be closed and deleted and will not be renewed.</p>
+										<p class="my-5">Current Subscription End Date <span class="ml-5">12/1/2020</span></p>
+										<p>If you are sure you want to cancel your account and subscription to the Amazon Search Term Analyzer, then type in your password and click 'Cancel Account'.</p>
+										<div class="my-5 row">
+											<div class="col-sm-4">
+												<p>Account Password:</p>
+											</div>
+											<div class="col-sm-6">
+												<div class="input-group">
+													<input type="password" class="form-control" placeholder="Enter Your Password" aria-describedby="basic-addon1">
+												</div>
+											</div>
+											<div class="col-sm-2">
+												<button id="filter-btn" type="button" class="btn btn-primary">Cancel Account</button>
+											</div>
+										</div>
+									</div>
+									
 								</div>
 							</div>      
 						
