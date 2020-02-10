@@ -33,6 +33,8 @@
 	<!--begin::Layout Skins(used by all pages) -->
 	<link rel="stylesheet" href="assets/plugins/custom/jquery-ui/jquery-ui.bundle.css">
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/css/bootstrap3/bootstrap-switch.min.css" integrity="sha256-sj3qkRTZIL8Kff5fST1TX0EF9lEmSfFgjNvuiw2CV5w=" crossorigin="anonymous" />
+
 	<!--end::Layout Skins -->
 	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
 </head>
@@ -367,25 +369,314 @@
 											<button class="btn btn-primary" role="button">Add Row</button>
 										</div>
 									</div>
-									<div class="form-group">
-										<label for="exampleInputEmail1">Email address</label>
-										<input type="email" class="form-control" id="exampleInputEmail1"
-											aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off"
-											style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-										<span class="form-text text-muted">We'll never share your email with anyone
-											else.</span>
+									<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
+									
+									<div class="row mt-2">
+										<div class="col-sm-3 offset-sm-2">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Field</option>
+													<option value="impressions">Impressions</option>
+                                                    <option value="clicks">Clicks</option>
+                                                    <option value="ctr">CTR</option>
+                                                    <option value="cpc">CPC</option>
+                                                    <option value="spend">Spend</option>
+                                                    <option value="sales">Sales</option>
+                                                    <option value="acos">ACoS</option>
+                                                    <option value="roas">ROAS</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-2">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Operator</option>
+													<option value="contains">Contains</option>
+                                                    <option value="not_contain">Does Not Contain</option>
+                                                    <option value="equals">Equals</option>
+                                                    <option value="not_equals">Does Not Equal</option>
+                                                    <option value="greater_than">Greater Than</option>
+                                                    <option value="less_than">Less Than</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="input-group">
+                                                <input type="text" class="form-control" id="threshold" placeholder="Value/Threshold">
+                                            </div>
+										</div>
+										<div class="col-sm-2 text-center">
+											<i class="fas fa-minus-circle pt-1" style="font-size: 28px;"></i>
+										</div>
 									</div>
-									<div class="form-group">
-										<label for="exampleInputPassword1">Password</label>
-										<input type="password" class="form-control" id="exampleInputPassword1"
-											placeholder="Password" autocomplete="off"
-											style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+									<div class="row my-3">
+										<div class="col-sm-2">
+											<input type="checkbox" class="bs-switch" data-toggle="switch" checked data-on-color="warning" data-off-color="danger" data-on-text="AND" data-off-text="OR">
+										</div>
+										<div class="col-sm-3">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Field</option>
+													<option value="impressions">Impressions</option>
+                                                    <option value="clicks">Clicks</option>
+                                                    <option value="ctr">CTR</option>
+                                                    <option value="cpc">CPC</option>
+                                                    <option value="spend">Spend</option>
+                                                    <option value="sales">Sales</option>
+                                                    <option value="acos">ACoS</option>
+                                                    <option value="roas">ROAS</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-2">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Operator</option>
+													<option value="contains">Contains</option>
+                                                    <option value="not_contain">Does Not Contain</option>
+                                                    <option value="equals">Equals</option>
+                                                    <option value="not_equals">Does Not Equal</option>
+                                                    <option value="greater_than">Greater Than</option>
+                                                    <option value="less_than">Less Than</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="input-group">
+                                                <input type="text" class="form-control" id="threshold" placeholder="Value/Threshold">
+                                            </div>
+										</div>
+										<div class="col-sm-2 text-center">
+											<i class="fas fa-minus-circle pt-1" style="font-size: 28px;"></i>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-sm-2">
+											<input type="checkbox" class="bs-switch" data-toggle="switch" checked data-on-color="warning" data-off-color="danger" data-on-text="AND" data-off-text="OR">
+										</div>
+										<div class="col-sm-3">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Field</option>
+													<option value="impressions">Impressions</option>
+                                                    <option value="clicks">Clicks</option>
+                                                    <option value="ctr">CTR</option>
+                                                    <option value="cpc">CPC</option>
+                                                    <option value="spend">Spend</option>
+                                                    <option value="sales">Sales</option>
+                                                    <option value="acos">ACoS</option>
+                                                    <option value="roas">ROAS</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-2">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Operator</option>
+													<option value="contains">Contains</option>
+                                                    <option value="not_contain">Does Not Contain</option>
+                                                    <option value="equals">Equals</option>
+                                                    <option value="not_equals">Does Not Equal</option>
+                                                    <option value="greater_than">Greater Than</option>
+                                                    <option value="less_than">Less Than</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="input-group">
+                                                <input type="text" class="form-control" id="threshold" placeholder="Value/Threshold">
+                                            </div>
+										</div>
+										<div class="col-sm-2 text-center">
+											<i class="fas fa-minus-circle pt-1" style="font-size: 28px;"></i>
+										</div>
 									</div>
 								</div>
 								<div class="kt-portlet__foot">
 									<div>
 										<button type="reset" class="btn btn-primary">Submit</button>
-										<button type="reset" class="btn btn-secondary">Cancel</button>
+										<!-- <button type="reset" class="btn btn-secondary">Cancel</button> -->
+									</div>
+								</div>
+							</form>
+							<!--end::Form-->
+						</div>
+						<div class="kt-portlet kt-portlet--mobile kt-portlet--sortable" data-ktportlet="true"
+							id="kt_portlet_tools_3">
+							<div class="kt-portlet__head ui-sortable-handle">
+								<div class="kt-portlet__head-label">
+									<h3 class="kt-portlet__head-title">
+										Rule #2: Rule Name
+									</h3>
+								</div>
+								<div class="kt-portlet__head-toolbar">
+									<div class="kt-portlet__head-group">
+										<a href="#" data-ktportlet-tool="toggle"
+											class="btn btn-sm btn-icon btn-outline-success btn-icon-md"
+											aria-describedby="tooltip_p0rd1kun0i"><i class="la la-angle-down"></i></a>
+										<a href="#" data-ktportlet-tool="remove"
+											class="btn btn-sm btn-icon btn-outline-danger btn-icon-md"
+											aria-describedby="tooltip_9gsg8rvebh"><i class="la la-close"></i></a>
+										<div class="tooltip tooltip-portlet tooltip bs-tooltip-top" role="tooltip"
+											id="tooltip_9gsg8rvebh" aria-hidden="true" x-placement="top"
+											style="position: absolute; will-change: transform; visibility: hidden; top: 0px; left: 0px; transform: translate3d(572px, -40px, 0px);">
+											<div class="tooltip-arrow arrow" style="left: 32px;"></div>
+											<div class="tooltip-inner">Remove</div>
+										</div>
+										<div class="tooltip tooltip-portlet tooltip bs-tooltip-top" role="tooltip"
+											id="tooltip_p0rd1kun0i" aria-hidden="true" x-placement="top"
+											style="position: absolute; will-change: transform; visibility: hidden; top: 0px; left: 0px; transform: translate3d(497px, -40px, 0px);">
+											<div class="tooltip-arrow arrow" style="left: 34px;"></div>
+											<div class="tooltip-inner">Collapse</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--begin::Form-->
+							<form class="kt-form kt-form--label-right">
+								<div class="kt-portlet__body">
+									<div class="row mb-3">
+										<div class="col-sm-3">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Categorization</option>
+													<option value="winner">Winner</option>
+													<option value="loser">Loser</option>
+													<option value="optimizable">Optimizable</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm 3 offset-sm-5 text-right">
+											<button class="btn btn-primary" role="button">Add Row</button>
+										</div>
+									</div>
+									<div class="kt-separator kt-separator--border-dashed kt-separator--space-md"></div>
+									
+									<div class="row mt-2">
+										<div class="col-sm-3 offset-sm-2">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Field</option>
+													<option value="impressions">Impressions</option>
+                                                    <option value="clicks">Clicks</option>
+                                                    <option value="ctr">CTR</option>
+                                                    <option value="cpc">CPC</option>
+                                                    <option value="spend">Spend</option>
+                                                    <option value="sales">Sales</option>
+                                                    <option value="acos">ACoS</option>
+                                                    <option value="roas">ROAS</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-2">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Operator</option>
+													<option value="contains">Contains</option>
+                                                    <option value="not_contain">Does Not Contain</option>
+                                                    <option value="equals">Equals</option>
+                                                    <option value="not_equals">Does Not Equal</option>
+                                                    <option value="greater_than">Greater Than</option>
+                                                    <option value="less_than">Less Than</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="input-group">
+                                                <input type="text" class="form-control" id="threshold" placeholder="Value/Threshold">
+                                            </div>
+										</div>
+										<div class="col-sm-2 text-center">
+											<i class="fas fa-minus-circle pt-1" style="font-size: 28px;"></i>
+										</div>
+									</div>
+									<div class="row my-3">
+										<div class="col-sm-2">
+											<input type="checkbox" class="bs-switch" data-toggle="switch" checked data-on-color="warning" data-off-color="danger" data-on-text="AND" data-off-text="OR">
+										</div>
+										<div class="col-sm-3">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Field</option>
+													<option value="impressions">Impressions</option>
+                                                    <option value="clicks">Clicks</option>
+                                                    <option value="ctr">CTR</option>
+                                                    <option value="cpc">CPC</option>
+                                                    <option value="spend">Spend</option>
+                                                    <option value="sales">Sales</option>
+                                                    <option value="acos">ACoS</option>
+                                                    <option value="roas">ROAS</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-2">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Operator</option>
+													<option value="contains">Contains</option>
+                                                    <option value="not_contain">Does Not Contain</option>
+                                                    <option value="equals">Equals</option>
+                                                    <option value="not_equals">Does Not Equal</option>
+                                                    <option value="greater_than">Greater Than</option>
+                                                    <option value="less_than">Less Than</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="input-group">
+                                                <input type="text" class="form-control" id="threshold" placeholder="Value/Threshold">
+                                            </div>
+										</div>
+										<div class="col-sm-2 text-center">
+											<i class="fas fa-minus-circle pt-1" style="font-size: 28px;"></i>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-sm-2">
+											<input type="checkbox" class="bs-switch" data-toggle="switch" checked data-on-color="warning" data-off-color="danger" data-on-text="AND" data-off-text="OR">
+										</div>
+										<div class="col-sm-3">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Field</option>
+													<option value="impressions">Impressions</option>
+                                                    <option value="clicks">Clicks</option>
+                                                    <option value="ctr">CTR</option>
+                                                    <option value="cpc">CPC</option>
+                                                    <option value="spend">Spend</option>
+                                                    <option value="sales">Sales</option>
+                                                    <option value="acos">ACoS</option>
+                                                    <option value="roas">ROAS</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-2">
+											<div class="input-group">
+												<select id="role-select" class="form-control">
+													<option value="" selected disabled>Operator</option>
+													<option value="contains">Contains</option>
+                                                    <option value="not_contain">Does Not Contain</option>
+                                                    <option value="equals">Equals</option>
+                                                    <option value="not_equals">Does Not Equal</option>
+                                                    <option value="greater_than">Greater Than</option>
+                                                    <option value="less_than">Less Than</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="input-group">
+                                                <input type="text" class="form-control" id="threshold" placeholder="Value/Threshold">
+                                            </div>
+										</div>
+										<div class="col-sm-2 text-center">
+											<i class="fas fa-minus-circle pt-1" style="font-size: 28px;"></i>
+										</div>
+									</div>
+								</div>
+								<div class="kt-portlet__foot">
+									<div>
+										<button type="reset" class="btn btn-primary">Submit</button>
+										<!-- <button type="reset" class="btn btn-secondary">Cancel</button> -->
 									</div>
 								</div>
 							</form>
@@ -407,7 +698,6 @@
 
 				<!--End::Dashboard 3-->
 			</div>
-			<h1>Testing</h1>
 			<!-- end:: Content -->
 		</div>
 	</div>
@@ -457,10 +747,15 @@
 	<script src="assets/js/pages/components/portlets/tools.js"></script>
 
 	<script src="assets/plugins/custom/jquery-ui/jquery-ui.bundle.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js" integrity="sha256-AKUJYz2DyEoZYHh2/+zPHm1tTdYb4cmG8HC2ydmTzM4=" crossorigin="anonymous"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es-us.js"
 		integrity="sha256-GLtGssLoLnMtXFDxuUAnn+DU02rievBO5E7B5/P50ik=" crossorigin="anonymous"></script>
-	<script src="add_user.js"></script>
+	
+
+	<script type="text/javascript">
+		$(".bs-switch").bootstrapSwitch();
+	</script>
 </body>
 
 </html>
